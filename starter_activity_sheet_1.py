@@ -13,7 +13,7 @@ print("Do you like programming " + name + "?")
 answer = input
 
 # change to an f string
-print("Great! You said " + answer + "!")
+print(f"Great! You said {answer}!")
 
 print("Let's learn some Python today " + name + "!")
 
