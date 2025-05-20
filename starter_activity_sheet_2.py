@@ -39,6 +39,6 @@ def Notequal_to():
     num = int(input("Enter a number: "))
     if num != 99:
         print("Good work you won")
-    elif num = 99:
+    elif num == 99:
         print("try again")
 Notequal_to()

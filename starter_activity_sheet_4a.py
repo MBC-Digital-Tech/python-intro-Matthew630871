@@ -1,25 +1,48 @@
-# program written for Session 4
-# Anything written after # is ignored by the computer
-# We can use it to annotate programs to make them more readable
-
 from turtle import *
 
-# this line says we are using the "turtle" library of functions
-# remember to use this for turtle graphics in Python
-
-
-def mystery():
-    color('green', 'red')
+def square():
+    color('red', 'green')
     begin_fill()
-    forward (100) 
-    right (90)
-    forward (100) 
-    right (90) 
-    forward (100) 
-    right (90) 
-    forward (100)
-    right (90)
+    for _ in range(4):
+        forward(200)
+        right(90)
     end_fill()
     done()
 
-mystery()
+def triangle():
+    color('blue', 'yellow')
+    begin_fill()
+    for _ in range(3):
+        forward(200)
+        right(120)
+    end_fill()
+    done()
+
+def square_triangle():
+    color('red', 'green')
+    begin_fill()
+    for _ in range(4):
+        forward(200)
+        right(90)
+    end_fill()
+    penup()
+    forward(200)
+    pendown()
+    color('blue', 'yellow')
+    begin_fill()
+    for _ in range(3):
+        forward(200)
+        right(120)
+    end_fill()
+    done()
+
+choice = input("Which shape do you want to draw? (square/triangle/both): ").strip().lower()
+
+if choice == "square":
+    square()
+elif choice == "triangle":
+    triangle()
+elif choice == "both":
+    square_triangle()
+else:
+    print("Invalid choice.")
